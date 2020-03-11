@@ -6,6 +6,29 @@
 
 body {
   background-color: #eaeaea;
+  animation: fade-in 0.3s ease-in;
+}
+
+header {
+  height: 80vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("/images/astrology-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  &::first-letter {
+    font-size: 4.5rem;
+  }
 }
 
 .title {
@@ -67,6 +90,7 @@ label {
 .zodiac-sign-container {
   text-align: center;
   letter-spacing: 1px;
+  animation: fade-in 0.8s ease-in;
 
   h2 {
     font-size: 3rem;
@@ -89,14 +113,17 @@ label {
     &::first-letter {
       color: purple;
       font-size: 3.5rem;
-      text-shadow: 2px 2px gold;
     }
   }
 }
 
-.zodiac-description {
-  margin: 3rem auto;
+.sign-info {
+  animation: toLeft 0.5s ease-in;
+}
 
+.zodiac-description {
+  margin: 1rem auto;
+  animation: toTop 0.5s ease-in;
   p {
     font-size: 1.3rem;
     line-height: 2.5rem;
@@ -106,7 +133,7 @@ label {
     font-family: "Lobster Two", cursive;
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     &::first-letter {
       font-size: 4rem;
@@ -115,12 +142,43 @@ label {
   }
 }
 
+.content-1 {
+  max-width: 80%;
+  margin: 4rem auto;
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    &::first-letter {
+      font-size: 3.5rem;
+      color: purple;
+      font-family: "Lobster Two", cursive;
+      margin-bottom: 2rem;
+    }
+  }
+  p {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+}
+
 @media (min-width: 500px) {
   .sign-stat {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+}
 
+@media (min-width: 850px) {
+  .content-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    align-items: center;
   }
 }
 
@@ -139,5 +197,24 @@ label {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes toLeft {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes toTop {
+  from {
+    transform: translateY(300px);
+  }
+
+  to {
+    tranform: translateY(0px);
   }
 }

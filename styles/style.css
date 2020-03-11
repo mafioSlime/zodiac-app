@@ -7,6 +7,33 @@
 
 body {
   background-color: #eaeaea;
+  -webkit-animation: fade-in 0.3s ease-in;
+          animation: fade-in 0.3s ease-in;
+}
+
+header {
+  height: 80vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/images/astrology-bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/astrology-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+header::first-letter {
+  font-size: 4.5rem;
 }
 
 .title {
@@ -69,6 +96,8 @@ label {
 .zodiac-sign-container {
   text-align: center;
   letter-spacing: 1px;
+  -webkit-animation: fade-in 0.8s ease-in;
+          animation: fade-in 0.8s ease-in;
 }
 
 .zodiac-sign-container h2 {
@@ -93,11 +122,17 @@ label {
 .sign-name h2::first-letter {
   color: purple;
   font-size: 3.5rem;
-  text-shadow: 2px 2px gold;
+}
+
+.sign-info {
+  -webkit-animation: toLeft 0.5s ease-in;
+          animation: toLeft 0.5s ease-in;
 }
 
 .zodiac-description {
-  margin: 3rem auto;
+  margin: 1rem auto;
+  -webkit-animation: toTop 0.5s ease-in;
+          animation: toTop 0.5s ease-in;
 }
 
 .zodiac-description p {
@@ -109,12 +144,38 @@ label {
   font-family: "Lobster Two", cursive;
   text-align: center;
   font-size: 1.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .zodiac-description .about-title::first-letter {
   font-size: 4rem;
   color: purple;
+}
+
+.content-1 {
+  max-width: 80%;
+  margin: 4rem auto;
+}
+
+.content-1 img {
+  width: 100%;
+}
+
+.content-1 h3 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.content-1 h3::first-letter {
+  font-size: 3.5rem;
+  color: purple;
+  font-family: "Lobster Two", cursive;
+  margin-bottom: 2rem;
+}
+
+.content-1 p {
+  font-size: 1.3rem;
+  line-height: 2.5rem;
 }
 
 @media (min-width: 500px) {
@@ -124,6 +185,19 @@ label {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .content-1 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -152,6 +226,46 @@ label {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes toLeft {
+  from {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes toLeft {
+  from {
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes toTop {
+  from {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  to {
+    tranform: translateY(0px);
+  }
+}
+
+@keyframes toTop {
+  from {
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  to {
+    tranform: translateY(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */
