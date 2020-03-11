@@ -11,13 +11,13 @@ body {
 
 header {
   position: relative;
-  height: 80vh;
+  height: 100vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("/images/nightsky.jpg");
+    url("../images/nightsky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
