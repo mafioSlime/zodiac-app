@@ -12,9 +12,10 @@ body {
 }
 
 header {
+  position: relative;
   height: 80vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/images/astrology-bg.jpg");
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/astrology-bg.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("/images/nightsky.jpg");
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/nightsky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,6 +23,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -34,6 +39,24 @@ header {
 
 header::first-letter {
   font-size: 4.5rem;
+}
+
+header img {
+  position: absolute;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  z-index: 4;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+  background-color: purple;
+  border-radius: 5px;
+  z-index: 5;
 }
 
 .title {
@@ -130,7 +153,7 @@ label {
 }
 
 .zodiac-description {
-  margin: 1rem auto;
+  margin: 2rem auto;
   -webkit-animation: toTop 0.5s ease-in;
           animation: toTop 0.5s ease-in;
 }
@@ -176,6 +199,61 @@ label {
 .content-1 p {
   font-size: 1.3rem;
   line-height: 2.5rem;
+}
+
+.moon {
+  top: 5%;
+  left: 50%;
+  -webkit-animation: float 20s ease alternate infinite;
+          animation: float 20s ease alternate infinite;
+}
+
+.cloud {
+  top: 10%;
+  left: 50%;
+  -webkit-animation: float 20s ease alternate infinite;
+          animation: float 20s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud2 {
+  top: 50%;
+  left: 50%;
+  -webkit-animation: cloud2 10s ease alternate infinite;
+          animation: cloud2 10s ease alternate infinite;
+  z-index: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.cloud3 {
+  top: 20%;
+  right: 30%;
+  -webkit-animation: cloud3 30s ease alternate infinite;
+          animation: cloud3 30s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud4 {
+  top: 0%;
+  right: 80%;
+  -webkit-animation: cloud4 25s ease alternate infinite;
+          animation: cloud4 25s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud5 {
+  top: 50%;
+  left: 10%;
+  -webkit-animation: cloud5 15s ease alternate infinite;
+          animation: cloud5 15s ease alternate infinite;
+}
+
+.cloud6 {
+  top: 80%;
+  left: 90%;
+  -webkit-animation: cloud6 15s ease alternate infinite;
+          animation: cloud6 15s ease alternate infinite;
 }
 
 @media (min-width: 500px) {
@@ -266,6 +344,126 @@ label {
   }
   to {
     tranform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes float {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes float {
+  from {
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes cloud2 {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud2 {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes cloud3 {
+  from {
+    -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud3 {
+  from {
+    -webkit-transform: translateX(-700px);
+            transform: translateX(-700px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes cloud4 {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud4 {
+  from {
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes cloud5 {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud5 {
+  from {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes cloud6 {
+  from {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud6 {
+  from {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  to {
+    tranform: translateX(0px);
   }
 }
 /*# sourceMappingURL=style.css.map */

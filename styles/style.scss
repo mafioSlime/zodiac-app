@@ -10,24 +10,42 @@ body {
 }
 
 header {
+  position: relative;
   height: 80vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url("/images/astrology-bg.jpg");
+    url("/images/nightsky.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   letter-spacing: 2px;
   &::first-letter {
     font-size: 4.5rem;
+  }
+  img {
+    position: absolute;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    z-index: 4;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem;
+    background-color: purple;
+    border-radius: 5px;
+    z-index: 5;
   }
 }
 
@@ -122,7 +140,7 @@ label {
 }
 
 .zodiac-description {
-  margin: 1rem auto;
+  margin: 2rem auto;
   animation: toTop 0.5s ease-in;
   p {
     font-size: 1.3rem;
@@ -163,6 +181,53 @@ label {
     font-size: 1.3rem;
     line-height: 2.5rem;
   }
+}
+
+.moon {
+  top: 5%;
+  left: 50%;
+  animation: float 20s ease alternate infinite;
+}
+
+.cloud {
+  top: 10%;
+  left: 50%;
+  animation: float 20s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud2 {
+  top: 50%;
+  left: 50%;
+  animation: cloud2 10s ease alternate infinite;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cloud3 {
+  top: 20%;
+  right: 30%;
+  animation: cloud3 30s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud4 {
+  top: 0%;
+  right: 80%;
+  animation: cloud4 25s ease alternate infinite;
+  z-index: 2;
+}
+
+.cloud5 {
+  top: 50%;
+  left: 10%;
+  animation: cloud5 15s ease alternate infinite;
+}
+
+.cloud6 {
+  top: 80%;
+  left: 90%;
+  animation: cloud6 15s ease alternate infinite;
 }
 
 @media (min-width: 500px) {
@@ -216,5 +281,65 @@ label {
 
   to {
     tranform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud2 {
+  from {
+    transform: translateX(200px);
+  }
+
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud3 {
+  from {
+    transform: translateX(-700px);
+  }
+
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud4 {
+  from {
+    transform: translateX(1000px);
+  }
+
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud5 {
+  from {
+    transform: translateX(200px);
+  }
+
+  to {
+    tranform: translateX(0px);
+  }
+}
+
+@keyframes cloud6 {
+  from {
+    transform: translateX(-200px);
+  }
+
+  to {
+    tranform: translateX(0px);
   }
 }
