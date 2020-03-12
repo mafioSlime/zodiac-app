@@ -175,30 +175,36 @@ label {
   color: purple;
 }
 
-.content-1 {
+.content-1,
+.content-2 {
   max-width: 80%;
   margin: 4rem auto;
 }
 
-.content-1 img {
+.content-1 img,
+.content-2 img {
   width: 100%;
 }
 
-.content-1 h3 {
+.content-1 h3,
+.content-2 h3 {
   font-size: 1.4rem;
   letter-spacing: 2px;
+  font-family: "Lobster Two", cursive;
 }
 
-.content-1 h3::first-letter {
+.content-1 h3::first-letter,
+.content-2 h3::first-letter {
   font-size: 3.5rem;
   color: purple;
-  font-family: "Lobster Two", cursive;
   margin-bottom: 2rem;
 }
 
-.content-1 p {
+.content-1 p,
+.content-2 p {
   font-size: 1.3rem;
   line-height: 2.5rem;
+  margin: 1rem auto;
 }
 
 .moon {
@@ -267,12 +273,13 @@ label {
 }
 
 @media (min-width: 850px) {
-  .content-1 {
+  .content-1,
+  .content-2 {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
