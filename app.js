@@ -268,6 +268,6 @@ const playZodiac = () => {
 playZodiac()
 
 
-// alert(
-//   "The horoscope function is not working on chrome... Please view the project on Mozilla while the developer is trying to fix the bug. Thank you!"
-// );
+alert(
+  "The horoscope function is not working on chrome... Please view the project on Mozilla while the developer is trying to fix the bug. Thank you!"
+);
